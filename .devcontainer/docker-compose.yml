@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  bevy:
+    build: .
+    command: sleep infinity
+    tty: true
+    volumes:
+      - ../:/bevy
+      - ./.zshrc:/home/vscode/.zshrc
+      - ~/.gitconfig:/home/vscode/.gitconfig
+    environment:
+      SHELL: /usr/bin/zsh

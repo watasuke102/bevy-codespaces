@@ -1,0 +1,12 @@
+{
+  "name": "bevy-codespaces",
+  "service": "bevy",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/bevy",
+  "dockerComposeFile": "docker-compose.yml",
+  "customizations": {
+    "vscode": {
+      "extensions": ["rust-lang.rust-analyzer"]
+    }
+  }
+}
