@@ -8,7 +8,10 @@
     "vscode": {
       "extensions": [
         "rust-lang.rust-analyzer",
-        "ritwickdey.LiveServer"
+        "ritwickdey.LiveServer",
+        "dustypomerleau.rust-syntax",
+        "eamodio.gitlens",
+        "bungcip.better-toml"
       ]
     }
   }

@@ -7,7 +7,6 @@ services:
     tty: true
     volumes:
       - ../:/bevy
-      - ./.zshrc:/home/vscode/.zshrc
       - ~/.gitconfig:/home/vscode/.gitconfig
     environment:
       SHELL: /usr/bin/zsh

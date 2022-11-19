@@ -10,7 +10,7 @@ ENV PATH="/home/${USERNAME}/.cargo/bin:$PATH"
 WORKDIR /bevy
 
 RUN apt-get update && apt-get install -y \
-  curl git sudo zsh build-essential librust-openssl-dev
+  curl git sudo zsh build-essential exa bat nvim librust-openssl-dev
 
 # create user
 # https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user#_creating-a-nonroot-user
@@ -24,3 +24,6 @@ USER ${USERNAME}
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y \
     && rustup target install wasm32-unknown-unknown \
     && cargo install wasm-bindgen-cli
+
+RUN cd ~ && git clone https://github.com/watasuke102/dotfiles \
+  && cd dotfiles && yes | sh setup.sh
