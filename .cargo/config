@@ -2,4 +2,12 @@
 target = "wasm32-unknown-unknown"
 
 [target.wasm32-unknown-unknown]
-runner = "wasm-server-runner"
+runner = [
+  "wasm-bindgen",
+  "--out-name",
+  "index",
+  "--out-dir",
+  "out",
+  "--target",
+  "web",
+]
